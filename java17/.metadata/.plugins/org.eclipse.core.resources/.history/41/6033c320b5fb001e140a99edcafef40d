@@ -1,0 +1,10 @@
+package com.java17Features.common;
+
+public class Java17InstanceofExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

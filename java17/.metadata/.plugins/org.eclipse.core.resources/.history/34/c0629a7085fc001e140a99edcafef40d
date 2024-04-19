@@ -1,0 +1,5 @@
+package com.suda.sealed;
+
+public non-sealed interface Two extends One {
+
+}

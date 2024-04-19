@@ -1,0 +1,9 @@
+package com.suda.sealed;
+
+public sealed class Account permits Savings,Curent {
+
+	protected int acno;
+	protected double balance;
+	
+	
+}

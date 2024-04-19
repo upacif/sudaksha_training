@@ -1,0 +1,26 @@
+package suda;
+
+public class CheckForVowel {
+	
+	public static void main(String[] args) {
+		char character='e';
+		switch (character) {
+		case 'i': 
+		case 'u': 
+		case '0':
+		case 'a':
+		case 'e': 
+		case 'I':
+		case 'U':
+		case 'O':
+		case 'A': 
+		case 'E': 
+			System.out.println("It is a vowel");
+			break;
+			
+		default:
+			System.out.println("It is a consonate");
+		}
+	}
+
+}

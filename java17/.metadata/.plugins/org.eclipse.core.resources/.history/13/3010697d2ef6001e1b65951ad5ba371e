@@ -1,0 +1,17 @@
+package suda;
+
+public abstract class Shape {
+	protected int length;
+	protected int breadth;
+	protected int radius;
+	public Shape(int length, int breadth, int radius) {
+		super();
+		this.length = length;
+		this.breadth = breadth;
+		this.radius = radius;
+	}
+	
+	public abstract double area();
+	
+
+}

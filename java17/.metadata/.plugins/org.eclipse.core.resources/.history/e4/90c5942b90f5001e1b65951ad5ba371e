@@ -1,0 +1,30 @@
+package suda;
+
+import java.util.Scanner;
+
+public class StringExamle {
+	public static void main(String[] args) {
+		int question=5;
+		String input;
+		Scanner scanner=new Scanner(System.in);
+		switch (question) {
+		case 4:
+		input=scanner.nextLine();
+		for (int i = 0; i <= input.length(); i++) {
+			System.out.println(input.substring(0,i));
+		}
+		break;
+		case 5:
+			input=scanner.nextLine();
+			for (int i = 0; i <= input.length(); i++) {
+				System.out.println(input.substring(i,i+1));
+			}
+			break;
+			default:
+				System.out.println("Question not available");
+			
+		
+	}
+	}
+
+}

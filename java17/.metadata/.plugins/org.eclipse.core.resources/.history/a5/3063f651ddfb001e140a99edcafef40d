@@ -1,0 +1,168 @@
+package com.sudaksha.Account.service;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.sudaksha.Account.beans.Account;
+import com.sudaksha.Account.beans.Transaction;
+import com.sudaksha.Account.dao.AccountTransactionsDao;
+import com.sudaksha.Account.exceptions.AccountNotfoundException;
+import com.sudaksha.Account.exceptions.InsufficientBalanceException;
+
+public class AccountTransactions {
+	AccountTransactionsDao accountTransactionsDao;
+	public void createAccount(String customerName,double balance) {
+		 accountTransactionsDao=new AccountTransactionsDao();
+		List<Account> accountList=accountTransactionsDao.readAllAccounts();
+		List<Transaction> transactions=new ArrayList<Transaction>();
+		Account account=new Account();
+		int initialAccount=10001;
+		if(accountList!=null) {
+			List<Integer> allAccountNumber =accountList.stream()
+					.map((acc)->acc.getAccountNumber())
+					.collect(Collectors.toList());
+			initialAccount=Collections.max(allAccountNumber)+1;
+		}
+		    account.setAccountNumber(initialAccount);
+			account.setCustomerName(customerName);
+			account.setBalance(balance);
+			accountList.add(account);
+			
+			Transaction transaction=new Transaction(LocalDate.now(), account.getAccountNumber(),
+					"Initial deposit", 'D', balance );
+			transactions.add(transaction);
+			accountTransactionsDao.writeAllAccounts(accountList);
+			accountTransactionsDao.writeToTransactionRecord(transactions);
+			
+			
+			System.out.println("Account created successfully as: "+initialAccount);
+		
+	}
+	
+public void deposit(int acno,double amount) {
+	
+	 accountTransactionsDao=new AccountTransactionsDao();
+		List<Account> accountList=accountTransactionsDao.readAllAccounts();
+		List<Transaction> transactions=accountTransactionsDao.readAllTransactions();
+	if(transactions==null) {
+		transactions=new ArrayList<Transaction>();
+	}
+	/*Optional<Account> acc=accountList.stream()
+			.filter((account)->account.getAccountNumber()==acno)
+			.map((account)->account)
+			.findAny();
+	acc.ifPresentOrElse(
+			(account)->{
+				if(account.getAccountNumber()==acno) {
+					account.setBalance(account.getBalance()+amount);
+					System.out.println("You deposit is done, new balance is:"+account.getBalance());
+				}			
+}
+			, 
+			()->System.out.println("Account number not found.")
+			);*/
+	try {
+	Account account=accountList.stream()
+			.filter((acc)->acc.getAccountNumber()==acno)
+			.map((acc)->acc).findAny().orElseThrow(()-> new AccountNotfoundException() );
+	account.setBalance(account.getBalance()+amount);
+	
+	Transaction transaction=new Transaction(LocalDate.now(), account.getAccountNumber(),
+			"deposit", 'D', amount );
+	transactions.add(transaction);
+	accountTransactionsDao.writeToTransactionRecord(transactions);
+	
+	System.out.println("You deposit is done, new balance is:"+account.getBalance());
+	}catch (AccountNotfoundException e) {
+		System.out.println(e.getMessage());
+	}
+		
+	}
+
+public void withdraw(int acno,double amount) {
+	
+	 accountTransactionsDao=new AccountTransactionsDao();
+		List<Account> accountList=accountTransactionsDao.readAllAccounts();
+		List<Transaction> transactions=accountTransactionsDao.readAllTransactions();
+
+	/*Optional<Account> acc=accountList.stream()
+			.filter((account)->account.getAccountNumber()==acno)
+			.map((account)->account)
+			.findAny();
+	acc.ifPresentOrElse(
+			(account)->{
+				if(account.getAccountNumber()==acno) {
+					if(account.getBalance()<amount) {
+						System.out.println("Insufficient balance to withdraw");
+					}else {
+					account.setBalance(account.getBalance()-amount);
+					System.out.println("You withdraw is done, new balance is:"+account.getBalance());
+					}
+				}
+				
+			
+}
+			, 
+			()->System.out.println("Account number not found.")
+			);*/
+	
+	
+	
+	try {
+		Account account=accountList.stream()
+				.filter((acc)->acc.getAccountNumber()==acno)
+				.map((acc)->acc).findAny().orElseThrow(()-> new AccountNotfoundException() );
+		
+		if(account.getBalance()<amount) {
+			throw new InsufficientBalanceException();
+		}
+		
+		account.setBalance(account.getBalance()-amount);
+		
+		Transaction transaction=new Transaction(LocalDate.now(), account.getAccountNumber(),
+				"withdraw", 'W', amount );
+		transactions.add(transaction);
+		accountTransactionsDao.writeToTransactionRecord(transactions);
+		
+		System.out.println("You withdraw is done, new balance is:"+account.getBalance());
+		
+		}catch (AccountNotfoundException | InsufficientBalanceException e) {
+			System.out.println(e.getMessage());
+		}
+	
+}
+
+
+public void checkBalance(int acno) {
+	 accountTransactionsDao=new AccountTransactionsDao();
+		List<Account> accountList=accountTransactionsDao.readAllAccounts();
+	try {
+		Account account=accountList.stream()
+				.filter((acc)->acc.getAccountNumber()==acno)
+				.map((acc)->acc).findAny().orElseThrow(()-> new AccountNotfoundException() );
+		System.out.println("Your balance is:"+account.getBalance());
+		
+		}catch (AccountNotfoundException | InsufficientBalanceException e) {
+			System.out.println(e.getMessage());
+		}
+	
+}
+
+public void viewStatement() {
+	System.out.println("TRANACTION DETAILS\n===========================================================");
+	 accountTransactionsDao=new AccountTransactionsDao();
+	 List<Transaction> transactions=accountTransactionsDao.readAllTransactions();
+	 if(transactions==null)
+		 transactions=new ArrayList<Transaction>();
+	
+	for(Transaction trans:transactions)
+		System.out.println(trans.date()+"|"+trans.accno()+"|"+trans.partuculars()+"|"+trans.transType()+"|"+trans.amount());
+	
+}
+
+
+
+}

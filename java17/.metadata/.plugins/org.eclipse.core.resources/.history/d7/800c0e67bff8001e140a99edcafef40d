@@ -1,0 +1,21 @@
+package suda;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+
+public class HttpRequestExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HttpClient httpClient= HttpClient.newHttpClient();
+		
+		try {
+			HttpRequest httpRequest =HttpRequest.newBuilder().uri(new URI("https://www.facebook.com"));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

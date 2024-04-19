@@ -1,0 +1,14 @@
+package suda.multi_thread;
+
+public class Transactions {
+
+
+		int balance=5000;
+	   synchronized	void withdraw(int amonut) {
+		System.out.println("Available balance= "+this.balance);
+			
+		}
+
+
+
+}

@@ -1,0 +1,17 @@
+package suda.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.sudaksha.employee.Employee;
+
+public class EmployeeList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Employee> empList=new ArrayList<Employee>();
+		
+
+	}
+
+}

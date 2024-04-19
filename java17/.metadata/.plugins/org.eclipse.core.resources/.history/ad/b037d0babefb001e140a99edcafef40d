@@ -1,0 +1,13 @@
+package com.java17Features.common;
+
+import java.util.Date;
+
+public class DateExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("default date using util.Date:"+new Date());
+
+	}
+
+}

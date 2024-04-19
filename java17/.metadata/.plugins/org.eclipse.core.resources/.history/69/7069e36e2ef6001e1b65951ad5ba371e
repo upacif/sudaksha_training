@@ -1,0 +1,15 @@
+package suda;
+
+public class Rectangle extends Shape {
+
+	public Rectangle(int length, int breadth, int radius) {
+		super(length, breadth, radius);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double area() {
+		return length*breadth;
+	}
+	
+}

@@ -1,0 +1,16 @@
+import java.io.FileOutputStream;
+
+public class InputOutputOpMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		FileOutputStream fous=new FileOutputStream("C:\\PA\\sudaksha\\files\file.txt");
+		int initial=65;
+		while(initial<91){
+			fous.write(initial);
+		}
+
+	}
+
+}

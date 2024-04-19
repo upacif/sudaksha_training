@@ -1,0 +1,28 @@
+package com.sudaksha.employee;
+
+import com.sudaksha.project.Project;
+
+public class employeeMain {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Employee emp=new Employee();
+		emp.setEmpId(123);
+		emp.setEmpName("Arjun");
+		
+		System.out.println(emp.getEmpId()+" "+emp.getEmpName());
+		
+		Project project=new Project();
+		project.setProjectId(3344);
+		project.setProjectName("health care system");
+		emp.setProject(project);
+		
+		System.out.println(emp.getEmpId()+" "+emp.getEmpName());
+		System.out.println(emp.getProject().getProjectId()+emp.getProject().getProjectName());
+		
+		
+
+	}
+
+}

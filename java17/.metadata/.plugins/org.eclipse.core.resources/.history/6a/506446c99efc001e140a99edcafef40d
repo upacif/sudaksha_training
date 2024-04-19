@@ -1,0 +1,8 @@
+package com.suda.generic_record;
+
+public class CustomerMain {
+	public static void main(String[] args) {
+		
+	}
+
+}

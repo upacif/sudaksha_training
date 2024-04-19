@@ -1,0 +1,23 @@
+package com.sudaksha.mobile_shop;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class MobileMain {
+	
+	public static void main(String[] args) {
+		MobileOperations operations=new MobileOperations(new ArrayList<HashMap<String,List<String>>>());
+		Mobile mobile=new Mobile("Oppo", "A55");
+		operations.addMobile(mobile.getBrand(), mobile.getModel());
+		Mobile mobile1=new Mobile("Oppo", "A56");
+		
+		operations.addMobile(mobile1.getBrand(), mobile1.getModel());
+		Mobile mobile2=new Mobile("Vivo", "k10");
+		List<HashMap<String, List<String>>> mobiles1=operations.addMobile(mobile1.getBrand(), mobile1.getModel());
+		
+		System.out.println(mobiles1);
+		
+	}
+
+}

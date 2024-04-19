@@ -1,0 +1,16 @@
+package com.inputOutput.write;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class WriteObject {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		FileOutputStream fos=new FileOutputStream("C:\\PA\\sudaksha\\files\\card_details");
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+
+	}
+
+}

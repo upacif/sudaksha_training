@@ -1,0 +1,34 @@
+package com.sudaksha.Account.beans;
+
+import java.time.LocalDate;
+
+public record Transaction  (
+		 LocalDate date,
+		 int accno,
+		 String partuculars,
+		 char transType,
+		 Double amount
+		) {
+
+	public LocalDate date() {
+		return date;
+	}
+
+	public int accno() {
+		return accno;
+	}
+
+	public String partuculars() {
+		return partuculars;
+	}
+
+	public char transType() {
+		return transType;
+	}
+
+	public Double amount() {
+		return amount;
+	}
+	
+
+}

@@ -1,0 +1,15 @@
+package com.sudaksha.Account.beans;
+
+import java.time.LocalDate;
+
+public record Transaction(
+		 LocalDate date,
+		 int accno,
+		 String partuculars,
+		 boolean deposit,
+		 char transType,
+		 Double amount
+		) {
+	
+
+}

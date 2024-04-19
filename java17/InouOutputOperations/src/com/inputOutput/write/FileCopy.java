@@ -1,0 +1,27 @@
+package com.inputOutput.write;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileCopy {
+
+	public static void main(String[] args) {
+	
+		try (FileInputStream fis = new FileInputStream("C:\\PA\\sudaksha\\files\\file.txt");
+				FileOutputStream fos=new FileOutputStream("C:\\PA\\sudaksha\\files\\file3.txt");
+				) {
+		
+		int r=0;
+		while((r=fis.read())!=-1) {
+			fos.write(r);
+		}
+		System.out.println("Read and write done..");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

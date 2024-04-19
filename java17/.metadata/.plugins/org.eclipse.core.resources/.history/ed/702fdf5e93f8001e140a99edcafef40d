@@ -1,0 +1,5 @@
+package com.sudaksha.Account.dao;
+
+public class AccountTransactionsDao {
+
+}

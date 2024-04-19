@@ -1,0 +1,32 @@
+package suda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BiConsumer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> lista=new ArrayList<Integer>();
+		lista.add(2);
+		lista.add(1);
+		lista.add(3);
+		
+	List<Integer> listb=new ArrayList<Integer>();
+	listb.add(2);
+	listb.add(1);
+	listb.add(3);
+	
+	java.util.function.BiConsumer<List<Integer>, List<Integer>>
+	equals=(list1,list2)->{
+		if (list1.size()!=list2.size()) {
+			System.out.println("False :size nto equal");
+			return;
+			
+		}
+		System.out.println("True");
+	};
+
+	}
+
+}

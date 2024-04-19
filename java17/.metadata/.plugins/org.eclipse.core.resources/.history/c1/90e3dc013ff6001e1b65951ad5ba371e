@@ -1,0 +1,5 @@
+package suda.Annotations;
+
+public @interface SingleValuedAnnotation {
+
+}

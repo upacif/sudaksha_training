@@ -1,0 +1,28 @@
+package suda.collectionCourse;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class HashMapExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<String, Double> map=new HashMap<String, Double>();
+		map.put("james", 25000.00);
+		map.put("gavin", 35000.00);
+		map.put("james", 60000.00);
+		map.put("arjun", 60000.00);
+		
+		System.out.println(map);
+		System.out.println(map.get("gavin"));
+		Set<Entry<String, Double>> set=map.entrySet();
+		
+		Iterator<Entry<String, Double>> itr=set.iterator();
+		while(itr.hasNext())
+			System.out.println(itr.next());
+
+	}
+
+}

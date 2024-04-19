@@ -1,0 +1,6 @@
+package suda;
+
+public class EnumExample {
+Toyota toyota=Toyota.COROLA;
+
+}

@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module suda {
+	requires com.sudaksha.employee;
+}

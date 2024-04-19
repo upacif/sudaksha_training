@@ -1,0 +1,17 @@
+package suda.Annotations;
+
+
+import java.util.ArrayList;
+
+public class AnnotationsUsage {
+	
+	public static void main(String[] args) {
+		ArrayList list=new ArrayList();
+		list.add("sonoo");
+		list.add("vimal");
+		list.add("ratan");
+		Date date=new Date();
+	}
+	
+
+}

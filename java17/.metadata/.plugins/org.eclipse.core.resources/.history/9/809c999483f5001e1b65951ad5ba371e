@@ -1,0 +1,28 @@
+package suda;
+
+import java.util.Scanner;
+
+public class EnumExample {
+public static void main(String[] args) {
+	Toyota toyota=Toyota.COROLA;
+	switch (toyota) {
+	case COROLA:
+		System.out.println("You have a corolla");
+		Scanner scanner=new Scanner(System.in);
+		break;
+	case YARIS:
+		System.out.println("You have a Yaris");
+		break;
+	case FORTUNA:
+		System.out.println("You have a Fortuna");
+		break;
+	case LANDCRUSER:
+		System.out.println("You have a LANDCRUSER");
+		break;
+		default:
+		System.out.println("You do not own a Toyota car");
+		
+	}
+}
+
+}

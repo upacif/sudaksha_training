@@ -1,0 +1,49 @@
+package com.sudaksha.Account.dao;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.sudaksha.Account.beans.Account;
+
+public class AccountTransactionsDao {
+	
+	public void createAccount(Account account) {
+		try(FileOutputStream fos=new FileOutputStream("C:\\PA\\sudaksha\\files\\bank_system\\bankAccountsLis");
+				FileOutputStream fis=new FileOutputStream("C:\\PA\\sudaksha\\files\\bank_system\\ankAccountsLis");
+				ObjectOutputStream oos=new ObjectOutputStream(fos);
+				ObjectOutputStream ois=new ObjectOutputStream(fis);
+				) {
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public List<Account> readAllAccounts() {
+		List<Account> availableAccounts=new ArrayList<Account>();
+		try(FileInputStream fis=new FileInputStream("C:\\PA\\sudaksha\\files\\bank_system\\ankAccountsLis");
+				ObjectInputStream ois=new ObjectInputStream(fis);
+				) {
+			Object obj;
+			while((obj=ois.readObject())!=null) {
+				List<Account> accounts=(List<Account>) obj;
+			}
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return availableAccounts;
+	}
+
+}

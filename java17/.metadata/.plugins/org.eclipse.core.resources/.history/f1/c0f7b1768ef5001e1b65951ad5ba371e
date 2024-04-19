@@ -1,0 +1,16 @@
+package suda;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class StringExamle {
+	public static void main(String[] args) {
+		String input;
+		Scanner scanner=new Scanner(System.in);
+		input=scanner.next();
+		for (int i = 0; i < input.length(); i++) {
+			System.out.println(input.subSequence(0, i));
+		}
+	}
+
+}

@@ -1,0 +1,44 @@
+package suda;
+
+import java.util.Scanner;
+
+public class StringExamle {
+	public static void main(String[] args) {
+		int question=6;
+		String input;
+		Scanner scanner=new Scanner(System.in);
+		switch (question) {
+		case 4:
+		input=scanner.nextLine();
+		for (int i = 0; i <= input.length(); i++) {
+			System.out.println(input.substring(0,i));
+		}
+		break;
+		case 5:
+			input=scanner.nextLine();
+			for (int i = 0; i <input.length(); i++) {
+				System.out.println(input.charAt(i));
+			}
+			break;
+			
+		case 6:
+			input=scanner.nextLine();
+			String tmpString="";
+			for (int i = 0; i < input.length(); i++) {
+				if(tmpString.contains(""+input.charAt(i))) {
+				System.out.println(input.charAt(i)+"Is duplicated");
+				}else {
+				tmpString=tmpString+input.charAt(i);
+				}
+			}
+			
+			break;
+			
+			default:
+				System.out.println("Question not available");
+			
+		
+	}
+	}
+
+}

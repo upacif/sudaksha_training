@@ -1,0 +1,21 @@
+package com.sudaksha.employee;
+
+public class Employee {
+	private int empId;
+	private String empNamee;
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getEmpNamee() {
+		return empNamee;
+	}
+	public void setEmpNamee(String empNamee) {
+		this.empNamee = empNamee;
+	}
+	
+	
+
+}

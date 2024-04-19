@@ -1,0 +1,60 @@
+package com.sudaksha.mobile_shop;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class MobileOperations {
+	
+	HashMap<String, List<String>> mobiles;
+
+	public HashMap<String, List<String>> getMobiles() {
+		return mobiles;
+	}
+
+	public void setMobiles(HashMap<String, List<String>> mobiles) {
+		this.mobiles = mobiles;
+	}
+
+	public MobileOperations(HashMap<String, List<String>> mobiles) {
+		super();
+		this.mobiles = mobiles;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "MobileOperations [mobiles=" + mobiles + "]";
+	}
+
+	HashMap<String, List<String>> addMobile(String brand,String model){
+		HashMap<String, List<String>> availMob=new HashMap<String, List<String>>();
+			
+		Map.Entry<String, List<String>> entry = availMob.entrySet().stream()
+                .filter(mapEntry -> brand.equals(mapEntry.getKey()))
+                .findAny();
+		
+	/*if(brandExist) {
+		availMob.get(brand).add(model);
+	}else {
+		List<String> md=new ArrayList<String>();
+		md.add(model);
+		availMob.put(brand,md);
+		this.mobiles.add(availMob);
+	}*/
+		return this.mobiles;
+	}
+
+	HashMap<String, List<String>> searchMobile(String brand){
+		
+		Map.Entry<String, List<String>> entry = hashMap.entrySet().stream()
+                .filter(mapEntry -> keyToFind.equals(mapEntry.getKey()))
+                .findFirst()
+                .orElse(null);
+		return null;
+	}
+	
+
+}

@@ -1,0 +1,37 @@
+package com.sudaksha.Account.service;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.sudaksha.Account.beans.Account;
+
+public class AccountTransactions {
+	List<Account> accountList=new ArrayList<Account>();
+	public void createAccount(String customerName,double balance) {
+		Account account=new Account();
+		int initialAccount=10001;
+		if(!accountList.isEmpty()) {
+			List<Integer> allAccountNumber =accountList.stream()
+					.map((acc)->acc.getAccountNumber())
+					.collect(Collectors.toList());
+			initialAccount=Collections.max(allAccountNumber)+1;
+		}
+		    account.setAccountNumber(initialAccount);
+			account.setCustomerName(customerName);
+			account.setBalance(balance);
+			accountList.add(account);
+			System.out.println("Account created successfully as: "+initialAccount);
+		
+	}
+	
+public void deposit(int acno,double amount) {
+		
+	}
+
+public void withdraw(int acno,double amount) {
+	
+}
+
+}

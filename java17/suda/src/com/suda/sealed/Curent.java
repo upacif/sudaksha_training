@@ -1,0 +1,19 @@
+package com.suda.sealed;
+
+public non-sealed class Curent extends Account {
+	private double overDraftLimit;
+	public double getOverDraftLimit() {
+		return overDraftLimit;
+	}
+	public void setOverDraftLimit(double overDraftLimit) {
+		this.overDraftLimit = overDraftLimit;
+	}
+	public static void main(String[] args) {
+		Curent cur=new Curent();
+		cur.setAcno(50001);
+		cur.setBalance(25000);
+		cur.setOverDraftLimit(200000);
+		System.out.println(cur.getAcno()+" "+cur.getBalance()+" "+cur.getOverDraftLimit());
+	}
+
+}

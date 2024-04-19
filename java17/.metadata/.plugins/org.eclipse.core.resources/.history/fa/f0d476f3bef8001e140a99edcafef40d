@@ -1,0 +1,13 @@
+package suda;
+
+import java.net.http.HttpClient;
+
+public class HttpRequestExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HttpClient httpClient=new HttpClient.newHttpClient();
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;caseStudy&apos; to &apos;com.sudaksha.Account.beans&apos;&#x0D;&#x0A;- Original project: &apos;caseStudy&apos;&#x0D;&#x0A;- Original element: &apos;caseStudy/src/caseStudy&apos;&#x0D;&#x0A;- Renamed element: &apos;caseStudy/src/com.sudaksha.Account.beans&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;caseStudy&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;caseStudy" name="com.sudaksha.Account.beans" qualified="false" references="true" stamp="1712811411339" textual="false" version="1.0"/>
+</session>

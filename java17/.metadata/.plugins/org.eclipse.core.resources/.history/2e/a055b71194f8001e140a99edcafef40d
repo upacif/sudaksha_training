@@ -1,0 +1,24 @@
+package com.sudaksha.Account.dao;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+import com.sudaksha.Account.beans.Account;
+
+public class AccountTransactionsDao {
+	
+	public void createAccount(Account account) {
+		try(FileOutputStream fos=new FileOutputStream("C:\\PA\\sudaksha\\files\\bank_system");
+				ObjectOutputStream oos=new ObjectOutputStream(fis);
+				) {
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

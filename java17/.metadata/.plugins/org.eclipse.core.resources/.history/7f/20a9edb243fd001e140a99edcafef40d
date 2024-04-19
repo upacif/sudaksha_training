@@ -1,0 +1,16 @@
+package suda;
+
+public class TestVar {
+	
+	void display() {
+		var a=55;
+		System.out.println(a);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+var code =1234;
+System.out.println(++code);
+	}
+
+}

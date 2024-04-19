@@ -1,0 +1,26 @@
+package suda;
+
+public class Persons {
+	private int code;
+	private String name;
+	
+	
+	public Persons() {
+		super();
+	}
+
+
+	public Persons(int code, String name) {
+		super();
+		this.code = code;
+		this.name = name;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Persons [code=" + code + ", name=" + name + "]";
+	}
+	
+
+}

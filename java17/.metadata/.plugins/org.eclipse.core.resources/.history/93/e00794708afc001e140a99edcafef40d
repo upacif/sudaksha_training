@@ -1,0 +1,17 @@
+package com.suda.sealed;
+
+public non-sealed class Bus implements Vehicle {
+
+	@Override
+	public void weels() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void engine() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package suda;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.file.Path;
+
+public class HttpRequestExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HttpClient httpClient= HttpClient.newHttpClient();
+		
+		try {
+			HttpRequest httpRequest =HttpRequest.newBuilder().uri(new URI("https://www.facebook.com"))
+					.GET().build();
+			
+			System.out.println(httpRequest);
+			HttpResponse<String> httpResponse=httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+			System.out.println("Status code:"+httpResponse.statusCode());
+			
+			HttpResponse<Path> responseToFile=httpClient.send(httpRequest, 
+					HttpResponse.BodyHandlers.ofFile("C:\\PA\\sudaksha\\files\\facebook.html"));
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

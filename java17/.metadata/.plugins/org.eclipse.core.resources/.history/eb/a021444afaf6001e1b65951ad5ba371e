@@ -1,0 +1,7 @@
+package com.sudaksha.accountInfo;
+
+public class AccountMain {
+	
+	Account account=new Account();
+
+}

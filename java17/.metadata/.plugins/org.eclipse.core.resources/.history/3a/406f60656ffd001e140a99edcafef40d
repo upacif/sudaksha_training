@@ -1,0 +1,15 @@
+package com.suda.sockets;
+
+import java.net.ServerSocket;
+
+public class MyServer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Server running...waiting for clent request");
+		ServerSocket ss=new ServerSocket(9090);
+
+	}
+
+}

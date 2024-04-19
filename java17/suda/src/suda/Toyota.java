@@ -1,0 +1,5 @@
+package suda;
+
+public enum Toyota {
+	YARIS,COROLA,FORTUNA,LANDCRUSER
+}

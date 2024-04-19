@@ -1,0 +1,7 @@
+package com.sudaksha.Account.exceptions;
+
+public class AccountNotfoundException extends RuntimeException {
+	
+	
+
+}

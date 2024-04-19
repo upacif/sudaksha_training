@@ -1,0 +1,16 @@
+package suda.multi_thread;
+
+public class Transactions {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int balance=5000;
+	synchronized	void withdraw(int amonut) {
+		System.out.println("Available balance= "+this.);
+			
+		}
+
+	}
+
+}

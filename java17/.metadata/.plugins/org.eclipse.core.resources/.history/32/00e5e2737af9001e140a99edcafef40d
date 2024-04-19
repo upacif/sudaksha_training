@@ -1,0 +1,14 @@
+package suda.multi_thread;
+
+public class RunnableCallableExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Even even=new Even();
+		Thread t1=new Thread(even);
+		t1.start();
+
+	}
+
+}

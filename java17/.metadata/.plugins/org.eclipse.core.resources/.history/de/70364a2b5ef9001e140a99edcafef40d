@@ -1,0 +1,12 @@
+package suda.multi_thread;
+
+public class TrainBrthsReservation implements Runnable  {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		int availableBerths=10;
+		
+	}
+
+}

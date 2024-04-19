@@ -1,0 +1,12 @@
+package com.java17Features.records;
+
+public class RecordMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student std=new Student(101, "James gosling", 500);
+		System.out.println(std.id()+" "+std.name()+" "+std.marks());
+
+	}
+
+}

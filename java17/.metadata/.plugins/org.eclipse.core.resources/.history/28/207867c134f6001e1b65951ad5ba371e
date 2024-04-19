@@ -1,0 +1,6 @@
+package suda;
+
+public interface FunctionIntTest {
+	public int sum(int a,int b) ;
+
+}

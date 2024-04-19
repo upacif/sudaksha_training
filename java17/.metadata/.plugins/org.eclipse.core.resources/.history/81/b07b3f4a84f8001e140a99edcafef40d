@@ -1,0 +1,15 @@
+package com.inputOutput.write;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class FileCopy {
+
+	public static void main(String[] args) {
+	
+		FileInputStream fis=new FileInputStream("C:\\PA\\sudaksha\\files\\file2.txt");
+		FileOutputStream fos=new FileOutputStream("C:\\PA\\sudaksha\\files\\file.txt");
+
+	}
+
+}

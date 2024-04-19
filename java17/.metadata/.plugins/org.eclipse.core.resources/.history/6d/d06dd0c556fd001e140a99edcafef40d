@@ -1,0 +1,39 @@
+package com.sudaksha.mobile_shop;
+
+import java.util.HashMap;
+import java.util.List;
+
+public class MobileOperations {
+	
+	List<HashMap<String, List<String>>> mobiles;
+
+	public List<HashMap<String, List<String>>> getMobiles() {
+		return mobiles;
+	}
+
+	public void setMobiles(List<HashMap<String, List<String>>> mobiles) {
+		this.mobiles = mobiles;
+	}
+
+	public MobileOperations(List<HashMap<String, List<String>>> mobiles) {
+		super();
+		this.mobiles = mobiles;
+	}
+	
+	List<HashMap<String, List<String>>> addMobile(String brand,String model){
+		boolean brandExist=false;
+		for(HashMap<String, List<String>> map: this.mobiles) {
+			if(map.containsKey(brand)){
+				brandExist=true;
+			}
+		}
+	
+		
+		
+		return this.mobiles;
+	}
+
+	
+	
+
+}

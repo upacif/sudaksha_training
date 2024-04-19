@@ -1,0 +1,14 @@
+package com.sudaksha.mobile_shop;
+
+import java.util.HashMap;
+import java.util.List;
+
+public class MobileOperations {
+	
+	List<HashMap<String, List<String>>> mobiles;
+	
+
+	
+	
+
+}

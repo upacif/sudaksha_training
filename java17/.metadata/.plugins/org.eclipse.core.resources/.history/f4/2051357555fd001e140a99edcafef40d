@@ -1,0 +1,27 @@
+package com.sudaksha.mobile_shop;
+
+import java.util.HashMap;
+import java.util.List;
+
+public class MobileOperations {
+	
+	List<HashMap<String, List<String>>> mobiles;
+
+	public List<HashMap<String, List<String>>> getMobiles() {
+		return mobiles;
+	}
+
+	public void setMobiles(List<HashMap<String, List<String>>> mobiles) {
+		this.mobiles = mobiles;
+	}
+
+	public MobileOperations(List<HashMap<String, List<String>>> mobiles) {
+		super();
+		this.mobiles = mobiles;
+	}
+	
+
+	
+	
+
+}

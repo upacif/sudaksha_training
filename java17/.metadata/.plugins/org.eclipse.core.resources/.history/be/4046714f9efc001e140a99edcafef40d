@@ -1,0 +1,6 @@
+package com.suda.generic_record;
+
+public record Customer(int code,String name) {
+	
+
+}

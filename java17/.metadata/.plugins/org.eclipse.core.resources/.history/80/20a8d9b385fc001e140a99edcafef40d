@@ -1,0 +1,11 @@
+package com.suda.sealed;
+
+public non-sealed class ClassTwo implements Two {
+
+	@Override
+	public void methodOne() {
+		System.out.println("From methodTwo");
+		
+	}
+	
+}

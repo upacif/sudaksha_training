@@ -1,0 +1,16 @@
+package suda;
+
+import java.util.function.Predicate;
+
+public class PredicateSimpleExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Predicate<String> pred=t->t.length()>5;
+		String str="Successfully";
+		System.out.println(pred.test(str));
+
+	}
+
+}

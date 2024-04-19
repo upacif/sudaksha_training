@@ -1,0 +1,16 @@
+package suda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ConsumerExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<Persons> listOfPersons=new ArrayList<Persons>();
+		listOfPersons.add(new Persons(27,"abc"));
+
+	}
+
+}

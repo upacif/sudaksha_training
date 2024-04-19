@@ -1,0 +1,8 @@
+package com.sudaksha.accountInfo;
+
+public class Account {
+	Long acno;
+	double balance;
+	
+
+}

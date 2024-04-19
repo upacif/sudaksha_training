@@ -1,0 +1,29 @@
+package suda.Generics;
+
+public class GenericMethodExample {
+	
+	public static <E> void printArray(E[] inputArr) {
+		for (E element : inputArr) {
+			System.out.println(element+" ");
+		}
+	}
+	
+	public static void main(String[] args) {
+		Integer [] intArr= {10,20,30,40,50};
+		Double [] doubleArr= {2.4,3.5,5.5,6.9};
+		char [] charArr= {'i','u','o','a','e'};
+		String [] strArr= {"aaa","bbb","ddd"};
+		System.out.println("\nInteger array elements ");
+		printArray(intArr);
+		
+		System.out.println("\nDouble array elements ");
+		printArray(doubleArr);
+		
+		System.out.println("\nCharacter array elements ");
+		printArray(charArr);
+		
+		System.out.println("\nString array elements ");
+		printArray(strArr);
+	}
+
+}

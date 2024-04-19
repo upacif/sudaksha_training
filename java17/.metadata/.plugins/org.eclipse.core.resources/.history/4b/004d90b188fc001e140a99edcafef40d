@@ -1,0 +1,5 @@
+package com.suda.sealed;
+
+public sealed interface Sample permits Class1,Class2 {
+
+}

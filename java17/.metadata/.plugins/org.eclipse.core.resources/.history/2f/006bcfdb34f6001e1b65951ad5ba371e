@@ -1,0 +1,9 @@
+package suda;
+
+public interface FunctionIntTest {
+	public int sum(int a,int b) ;
+	public default displayMessage() {
+		System.out.println("The result is:");
+	}
+
+}

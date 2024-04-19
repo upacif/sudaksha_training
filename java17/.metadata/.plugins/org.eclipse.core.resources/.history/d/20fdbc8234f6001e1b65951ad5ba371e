@@ -1,0 +1,18 @@
+package suda;
+
+public class FunctionIntCall {
+	
+	public static void main(String[] args) {
+		int a=5;
+				int b=7;
+		FunctionIntTest fint=(a,b)->{
+				return a+b;
+		};
+		
+		int r =fint.sum(5, 7);
+		
+		System.out.println("Sum is:"+r);
+		
+	}
+
+}

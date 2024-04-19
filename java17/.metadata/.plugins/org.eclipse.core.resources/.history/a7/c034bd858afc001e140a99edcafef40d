@@ -1,0 +1,17 @@
+package com.suda.sealed;
+
+public non-sealed class Aeroplane implements Vehicle {
+
+	@Override
+	public void weels() {
+		System.out.println("Bus has 3 weels");
+
+	}
+
+	@Override
+	public void engine() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

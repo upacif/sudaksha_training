@@ -1,0 +1,14 @@
+package suda.multi_thread;
+
+public class FetchDataFromFile implements Runnable {
+	private String fileName;
+	
+	
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

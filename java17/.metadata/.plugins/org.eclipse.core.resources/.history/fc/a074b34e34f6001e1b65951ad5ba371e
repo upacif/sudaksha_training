@@ -1,0 +1,14 @@
+package suda;
+
+public class FunctionIntCall {
+	
+	public static void main(String[] args) {
+		int a;
+		int b;
+		FunctionalInterface fint=(a,b)->{
+				return a+b;
+		};
+		
+	}
+
+}

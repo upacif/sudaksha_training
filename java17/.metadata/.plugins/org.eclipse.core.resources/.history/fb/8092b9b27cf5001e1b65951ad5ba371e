@@ -1,0 +1,9 @@
+package suda;
+
+public class EnumExample {
+Toyota toyota=Toyota.COROLA;
+switch (toyota) {
+case "COROLA":
+	System.out.println("You have corlla");
+}
+}

@@ -1,0 +1,43 @@
+package suda.collectionCourse;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+public class StreamAPIEx3 {
+	
+	public static void main(String[] args) {
+		List<Employee> empList=new ArrayList<Employee>();
+		empList.add(new Employee(102, "james", 55000));
+		empList.add(new Employee(101, "Abacus", 45000));
+		empList.add(new Employee(301, "rod Johnson", 76000));
+		empList.add(new Employee(202, "Gavin King", 350000));
+		empList.add(new Employee(201, "Arjun", 7500));
+		empList.add(new Employee(302, "Sudaksh", 75000));
+		/*Optional<Employee> singleEmp=empList.stream()
+				.filter((e)->e.getEmpId()==111)
+				.map((e)->e)
+				.findAny();
+		System.out.println(singleEmp);
+		
+		singleEmp.ifPresent((emp)->System.out.println(singleEmp));
+		
+		singleEmp.ifPresentOrElse((emp)->System.out.println(singleEmp), ()->System.out.println("Employee not found"));
+		*/
+		//CHECK EXCEPTION USING CUSTOM EXCEPTION
+		
+		try {
+			
+			Employee emp1=empList.stream()
+					.filter((emp)->emp.getEmpId()==122222)
+					.map((emp)->emp)
+					.findAny().orElseThrow(()-> new EmployeeNotFoundException() );
+			System.out.println("Emp fond:"+emp1);
+		} catch (EmployeeNotFoundException e2) {
+			e2.getMessage();
+		}
+		
+	
+	}
+
+}

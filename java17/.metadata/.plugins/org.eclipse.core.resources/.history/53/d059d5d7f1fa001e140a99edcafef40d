@@ -1,0 +1,24 @@
+package suda.multi_thread;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+
+public class CompletableFutureExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		CompletableFuture<String> greetingFuture=CompletableFuture.supplyAsync(()->{
+			return "hello from Completable future";
+		});
+		
+		try {
+			System.out.println(greetingFuture.get());
+		} catch (InterruptedException | ExecutionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

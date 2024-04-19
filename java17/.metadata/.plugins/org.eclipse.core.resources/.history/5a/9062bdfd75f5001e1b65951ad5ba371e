@@ -1,0 +1,19 @@
+package suda;
+
+public class StudentMarks {
+
+public static void main(String[] args) {
+	int rno,sub1,sub2,sub3,total;
+	double average;
+	rno=1;
+	sub1=40;
+	sub2=35;
+	sub3=30;
+	total=sub1+sub2+sub3;
+	average=total/3;
+	if (average>=40) 
+	System.out.println("Pass");
+	else 
+		System.out.println("Fail");
+}
+}
